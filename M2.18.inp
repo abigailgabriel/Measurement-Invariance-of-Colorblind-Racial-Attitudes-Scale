@@ -1,0 +1,208 @@
+  TITLE:  MGCFA CoBRAS on M2 comparing Whites and POC
+  DATA:   FILE IS CoBRAS.dat;
+  VARIABLE: NAMES ARE Race i1-i20;
+            USEVARIABLES  ARE i1-i20;
+            GROUPING = Race (1=POC 2=White);
+  ANALYSIS: ESTIMATOR IS MLR;
+  OUTPUT: MODINDICES(3.84)
+          RESIDUAL
+          STDYX;       
+  MODEL: 
+  ! factor loadings of first-order factors
+
+  PRIV BY i1@1 
+    i2(C2) 
+    i6(C6) 
+    i8(C8) 
+    i12(C12) 
+    i15(C15) 
+    i20(C20);
+  INST BY i3@1 
+    i4(C4) 
+    i9(C9) 
+    i13(C13) 
+    i14(C14) 
+    i16(C16) 
+    i18(C18);
+  BLAT BY i5@1 
+    i7(C7) 
+    i10(C10) 
+    i11(C11) 
+    i17(C17) 
+    i19(C19);
+  i11 WITH i17;
+  i2 WITH i20;
+  i3 WITH i13;
+  i13 WITH i14;
+  PRIV BY i4;
+  BLAT BY i6;
+  i5 WITH i10;
+  i2 WITH i8;
+
+  ! intercepts of measured variables/items
+
+  [i1*](int1);
+  [i2*](int2);
+  [i3*](int3);
+  [i4*](int4);
+  [i5*](int5);
+  [i6*](int6);
+  [i7*](int7);
+  [i8*](int8);
+  [i9*](int9);
+  [i10*](int10);
+  [i11*](int11);
+  [i12*](int12);
+  [i13*](int13);
+  [i14*](int14);
+  [i15*](int15);
+  [i16*](int16);
+  [i17*](int17);
+  [i18*](int18);
+  [i19*](int19);
+  [i20*](int20);
+
+  ! residual variances of measured variables/items
+
+  i1*(rv1);
+  i2*(rv2);
+  i3*(rv3);
+  i4*(rv4);
+  i5*(rv5);
+  i6*(rv6);
+  i7*(rv7);
+  i8*(rv8);
+  i9*(rv9);
+  i10*(rv10);
+  i11*(rv11);
+  i12*(rv12);
+  i13*(rv13);
+  i14*(rv14);
+  i15*(rv15);
+  i16*(rv16);
+  i17*(rv17);
+  i18*(rv18);
+  i19*(rv19);
+  i20*(rv20);
+
+  ! intercepts of factors
+
+  [PRIV@0];
+  [INST@0];
+  [BLAT@0];
+
+  ! variances of factors
+
+  PRIV*(v1);
+  INST*(v2);
+  BLAT*(v3);
+
+  ! covariances between measured variables/items
+
+  i11 WITH i17*; !for POC
+  i2 WITH i20*; !for POC
+  i3 WITH i13*; !for POC
+  i13 WITH i14*; !for POC
+  PRIV BY i4*; !for POC
+  BLAT BY i6*; !for POC
+
+  MODEL White: 
+  ! factor loadings of first-order factors
+
+  PRIV BY i1@1 
+    i2(C2) 
+    i6(C6) 
+    i8(C8) 
+    i12(C12) 
+    i15(C15) 
+    i20(C20);
+  INST BY i3@1 
+    i4(C4) 
+    i9(C9) 
+    i13(C13) 
+    i14(C14) 
+    i16(C16) 
+    i18(C18);
+  BLAT BY i5@1 
+    i7(C7) 
+    i10(C10) 
+    i11(C11) 
+    i17(C17) 
+    i19(C19);
+  i11 WITH i17;
+  i2 WITH i20;
+  i3 WITH i13;
+  i13 WITH i14;
+  PRIV BY i4;
+  BLAT BY i6;
+  BLAT BY i4;
+  PRIV BY i6;
+  i19 WITH i7;
+  i4 WITH i16;
+
+  ! intercepts of measured variables/items
+
+  [i1*](int1);
+  [i2*](int2);
+  [i3*](int3);
+  [i4*](int4);
+  [i5*](int5);
+  [i6*](int6);
+  [i7*](int7);
+  [i8*](int8);
+  [i9*](int9);
+  [i10*](int10);
+  [i11*](int11);
+  [i12*](int12);
+  [i13*](int13);
+  [i14*](int14);
+  [i15*](int15);
+  [i16*](int16);
+  [i17*](int17);
+  [i18*](int18);
+  [i19*](int19);
+  [i20*](int20);
+
+  ! residual variances of measured variables/items
+
+  i1*;
+  i2*;
+  i3*;
+  i4*;
+  i5*;
+  i6*;
+  i7*;
+  i8*;
+  i9*;
+  i10*;
+  i11*;
+  i12*;
+  i13*;
+  i14*;
+  i15*;
+  i16*;
+  i17*;
+  i18*;
+  i19*;
+  i20*;
+
+  ! intercepts of factors
+
+  [PRIV*];
+  [INST@0];
+  [BLAT@0];
+
+  ! variances of factors
+
+  PRIV*(v1);
+  INST*(v2);
+  BLAT*(v3);
+
+    ! covariances between measured variables/items
+
+  i11 WITH i17@0; !for POC
+  i2 WITH i20@0; !for POC
+  i3 WITH i13@0; !for POC
+  i13 WITH i14@0; !for POC
+  PRIV BY i4@0; !for POC
+  BLAT BY i6@0; !for POC

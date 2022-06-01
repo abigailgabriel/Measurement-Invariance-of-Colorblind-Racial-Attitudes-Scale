@@ -1,0 +1,13 @@
+TITLE: CFA Project 1st try;
+  DATA: 
+    FILE IS CFA Project data set race and CC.dat;
+  VARIABLE:
+    NAMES ARE cc1-cc19;
+    MISSING = all(999);
+     ANALYSIS: ESTIMATOR IS MLR;
+  MODEL:
+    F1 BY cc1* cc2 cc9 cc13 cc17;
+    F2 BY cc3* cc5 cc6 cc10 cc12 cc15 cc18 cc19;
+    F3 BY cc4* cc7 cc8 cc11 cc14 cc16
+    F1@1; F2@1; F3@1
+OUTPUT: standardized; residual; sampstat;

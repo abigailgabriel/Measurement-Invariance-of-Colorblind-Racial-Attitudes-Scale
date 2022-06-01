@@ -1,0 +1,13 @@
+  TITLE:  Model 2: CFA Oblique 3 factor model
+  with non-normal continuous variables and no missing data
+  DATA:   FILE IS CoBRAS.dat;
+  VARIABLE: NAMES ARE Race i1-i20;
+            USEVARIABLES  ARE i1-i20;
+  ANALYSIS: ESTIMATOR IS MLR;
+  OUTPUT: MODINDICES(3.84)
+          RESIDUAL
+          TECH4;
+  MODEL: PRIV BY i1 i2 i6 i8 i12 i15 i20;
+          INST BY i3 i4 i9 i13 i14 i16 i18;
+          BLAT BY i5 i7 i10 i11 i17 i19;
+          i11 WITH i17;
