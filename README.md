@@ -10,6 +10,10 @@ The purpose of the present study was to perform a psychometric evaluation of the
 (3) measurement invariance of the CoBRAS across racial minority groups (monoracial Black, monoracial Asian, monoracial Latinx, and multiracial); and 
 (4) the internal reliability estimates and evidence of validity for the CoBRAS.
 
+[Gabriel factor structure measurement invariance cobras.pdf](https://github.com/abigailgabriel/Measurement-Invariance-of-Colorblind-Racial-Attitudes-Scale/files/10114828/Gabriel.factor.structure.measurement.invariance.cobras.pdf)
+
 <img width="837" alt="Screen Shot 2022-11-29 at 11 07 41 AM" src="https://user-images.githubusercontent.com/86257471/204581354-34cf0e8e-26ab-4d08-b890-67811eb6254d.png">
 
-[Gabriel factor structure measurement invariance cobras.pdf](https://github.com/abigailgabriel/Measurement-Invariance-of-Colorblind-Racial-Attitudes-Scale/files/10114828/Gabriel.factor.structure.measurement.invariance.cobras.pdf)
+<img width="793" alt="Screen Shot 2022-11-29 at 11 08 32 AM" src="https://user-images.githubusercontent.com/86257471/204581540-1443a001-6632-442e-ba47-559231b658a1.png">
+
+<img width="556" alt="Screen Shot 2022-11-29 at 11 09 00 AM" src="https://user-images.githubusercontent.com/86257471/204581657-f2dfdd88-f7cd-4f0a-93fc-f77beb417d28.png">
